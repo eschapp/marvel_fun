@@ -1,0 +1,23 @@
+{
+  "name": "marvel_fun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eschapp/marvel_fun.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eschapp/marvel_fun/issues"
+  },
+  "homepage": "https://github.com/eschapp/marvel_fun#readme",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}
