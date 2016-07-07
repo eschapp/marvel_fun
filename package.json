@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "serve": "http-server",
+    "start": "npm run serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +21,8 @@
   "homepage": "https://github.com/eschapp/marvel_fun#readme",
   "devDependencies": {
     "http-server": "^0.9.0"
+  },
+  "dependencies": {
+    "js-md5": "^0.4.1"
   }
 }

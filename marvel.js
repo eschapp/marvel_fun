@@ -14,7 +14,10 @@ function fetchJSON(url) {
 function marvelFactory(config) {
   return function(path) {
     var timestamp = new Date().getTime();
-    var hash = CryptoJS.MD5(timestamp + config.privateKey + config.publicKey).toString();
+    var hash = md5.create();
+    hash.update(timestamp + config.privateKey + config.publicKey);
+    hash.hex();
+    // var hash = CryptoJS.MD5(timestamp + config.privateKey + config.publicKey).toString();
     var url = config.hostname + '/v' + config.version + '/public' + path + '?apikey=' + config.publicKey + '&ts=' + timestamp + '&hash=' + hash;
     console.log(url);
 
@@ -28,4 +31,8 @@ var marvel = marvelFactory({
   publicKey: 'c5ebb123335240358c2744cde0f38b7e',
   privateKey: 'cff3343714de139da0173348487355979eda8406',
   version: '1'
+});
+
+marvel('/characters').then(function(json) {
+  console.log(json);
 });
