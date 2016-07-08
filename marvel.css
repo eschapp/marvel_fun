@@ -1,3 +1,39 @@
 body {
   background: tomato;
 }
+
+h1 {
+  text-align: center;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+}
+
+comics {
+  margin: 0 auto;
+}
+comic {
+  display:inline-block;
+  padding: 5px;
+  margin: 50px;
+}
+
+img {
+  width: 500px;
+  float:left;
+  }
+
+comic-title {
+  display: block;
+  text-align: center;
+  text-decoration: bold;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
