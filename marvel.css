@@ -1,9 +1,12 @@
 body {
   background: DarkSlateGray;
+  font-family: 'Secular One', sans-serif;
+  font-color: #fff;
 }
 
 h1 {
   text-align: center;
+  color: #fff;
 }
 
 a {
@@ -23,9 +26,10 @@ comics {
 
 comic {
   display:inline-block;
-  height: 500px;
+  height: 700px;
   max-width: 300px;
   overflow: hidden;
+  padding: 0 5px;
 }
 
 comic-title {
@@ -37,28 +41,27 @@ comic-title {
   transition: transform 1s;
 }
 
-comic-title:hover {
-  display: block;
-  text-align: center;
-  text-decoration: bold;
-  font-size: 20px;
-  margin-bottom:0px;
-  transform rotateZ(1080deg);
-}
-
 comic img {
   transform: scale(5.0);
-  min-height: 300px;
   width: 300px;
-  float:left;
+  float: top;
   transition: transform .5s;
   }
 
 
 comic:hover img {
-  transform: scale(1.0);
-  transform: rotateX(1080deg);
-  -webkit-transform: rotateX(1080deg);
   position: relative;
+  transform: scale(.8);
   z-index: 40;
+  overflow: hidden;
+  margin-top: -20px;
+}
+
+comic-description {
+  font-size: 16px;
+  color: #fff;
+  margin-top:  -40px;
+  margin: 0 5px;
+  padding: 0 10px;
+  text-align: center;
 }

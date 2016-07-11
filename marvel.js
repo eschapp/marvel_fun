@@ -71,22 +71,29 @@ marvel('/comics').then(function(json) {
 
     var imgPath = makeFilePath(comic.thumbnail.path, comic.thumbnail.extension);
     var title = comic.title;
+    var description = comic.description;
 
     var img = $.create('img');
     $.setAttribute(img, 'src', imgPath);
 
     var titleTag = $.create('comic-title');
+    var descriptionTag = $.create('comic-description');
 
     var titleTextNode = $.createText(title);
     var titleLinkNode = $.create('a');
+
+    var descriptionTextNode = $.createText(description);
 
     $.setAttribute(titleLinkNode, 'href', 'https://www.google.com/#q=' + encodeURIComponent(title));
     $.appendChild(titleLinkNode, titleTextNode);
 
     $.appendChild(titleTag, titleLinkNode);
 
+    $.appendChild(descriptionTag, descriptionTextNode);
+
     $.appendChild(comicContainer, titleTag);
     $.appendChild(comicContainer, img);
+    $.appendChild(comicContainer, descriptionTag);
 
     var imgFound = marvelImageFound(imgPath);
     if(imgFound) {
