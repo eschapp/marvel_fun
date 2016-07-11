@@ -18,22 +18,47 @@ a:hover {
 
 comics {
   margin: 0 auto;
-}
-comic {
-  display:inline-block;
-  padding: 5px;
-  margin: 50px;
+  width: 100%;
 }
 
-img {
-  width: 500px;
-  float:left;
-  }
+comic {
+  display:inline-block;
+  height: 500px;
+  max-width: 300px;
+  overflow: hidden;
+}
 
 comic-title {
   display: block;
   text-align: center;
   text-decoration: bold;
   font-size: 20px;
-  margin-bottom: 5px;
+  margin-bottom:0px;
+  transition: transform 1s;
+}
+
+comic-title:hover {
+  display: block;
+  text-align: center;
+  text-decoration: bold;
+  font-size: 20px;
+  margin-bottom:0px;
+  transform rotateZ(1080deg);
+}
+
+comic img {
+  transform: scale(5.0);
+  min-height: 300px;
+  width: 300px;
+  float:left;
+  transition: transform .5s;
+  }
+
+
+comic:hover img {
+  transform: scale(1.0);
+  transform: rotateX(1080deg);
+  -webkit-transform: rotateX(1080deg);
+  position: relative;
+  z-index: 40;
 }
