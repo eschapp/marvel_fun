@@ -4,7 +4,18 @@ body {
   font-color: #fff;
 }
 
-h1 {
+header {
+  background: url(http://data.whicdn.com/images/59798882/large.png) repeat;
+  height: 200px;
+  font-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+body header h1 {
+  display: block;
+  margin: 0 auto;
+  padding-top: 40px;
   text-align: center;
   color: #fff;
 }
@@ -26,10 +37,11 @@ comics {
 
 comic {
   display:inline-block;
-  height: 700px;
+  height: 800px;
   max-width: 300px;
   overflow: hidden;
   padding: 0 5px;
+  margin-bottom: -7px;
 }
 
 comic-title {
